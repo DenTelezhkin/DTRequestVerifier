@@ -24,44 +24,40 @@
     return verifier;
 }
 
+-(void)logMessage:(NSString *)message
+{
+    if (self.loggingEnabled)
+    {
+        NSLog(@"DTRequestVerifier. %@",message);
+    }
+}
+
 -(BOOL)verifyRequest:(NSURLRequest *)request
 {
     self.request = request;
     
     if (![request.HTTPMethod isEqualToString:self.HTTPMethod])
     {
-        if (self.loggingEnabled)
-        {
-            NSLog(@"request: %@ HTTP method does not match expected value: %@",request,self.HTTPMethod);
-        }
+        [self logMessage:[NSString stringWithFormat:@"HTTP Method for request: %@ does not match expected value: %@",request,self.HTTPMethod]];
         return NO;
     }
     
     if (![[request.URL host] isEqualToString:self.host])
     {
-        if (self.loggingEnabled)
-        {
-            NSLog(@"request host: %@ does not match expected value : %@",[[request URL] host],self.host);
-        }
+        [self logMessage:[NSString stringWithFormat:@"Request host: %@ does not match expected value : %@",[[request URL] host],self.host]];
         return NO;
     }
     
     if (![[request.URL path] isEqualToString:self.path])
     {
-        if (self.loggingEnabled)
-        {
-            NSLog(@"request path: %@ does not match expected value : %@",[[request URL] path],self.path);
-        }
-        return  NO;
+        [self logMessage:[NSString stringWithFormat:@"Request path: %@ does not match expected value : %@",[[request URL] path],self.path]];
+        return NO;
     }
     
     if (![self verifyQueryParams:self.queryParams])
     {
-        if (self.loggingEnabled)
-        {
-            NSLog(@"request: %@ query params do not match expected params : %@",request,self.queryParams);
-        }
-        return  NO;
+        [self logMessage:[NSString stringWithFormat:@"Request query params: %@ do not match expected params : %@",request,self.queryParams]];
+        return NO;
     }
     
     if (![self verifyBodyParams:self.bodyParams])
@@ -123,7 +119,7 @@
     
     if (!compareResult && self.loggingEnabled)
     {
-        NSLog(@"compare failed: %@ %@",expectedParams,receivedParams);
+        NSLog(@"Expected params: %@ do not match received params: %@",expectedParams,receivedParams);
     }
     return compareResult;
 }
