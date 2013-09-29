@@ -6,7 +6,8 @@ Easy, extensible NSURLRequest verification for unit testing.
 ### Sample usage with XCTest:
 
 ```objective-c
-NSURLRequest * request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"www.google.com/test?query=foo&data=bar"]];
+NSURL * url = [NSURL URLWithString:@"www.google.com/test?query=foo&data=bar"] 
+NSURLRequest * request = [[NSURLRequest alloc] initWithURL:url];
 DTRequestVerifier * verifier = [DTRequestVerifier verifier];
 verifier.host = @"www.google.com";
 verifier.path = @"/test";
@@ -18,7 +19,8 @@ XCTAssertFalse([verifier verifyRequest:request], @"");
 
 ```objective-c
 NSDictionary * parameters = @{@"foo":@"bar", @"apikey":@"12345"};
-NSMutableURLRequest * request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"www.google.com/user/create"]];
+NSURL * url = [NSURL URLWithString:@"www.google.com/user/create"];
+NSMutableURLRequest * request = [[NSMutableURLRequest alloc] initWithURL:url];
 request.HTTPMethod = @"POST";
 [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
 [request setHTTPBody:[NSJSONSerialization dataWithJSONObject:parameters
