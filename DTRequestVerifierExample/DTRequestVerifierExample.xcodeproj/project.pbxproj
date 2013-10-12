@@ -19,7 +19,9 @@
 		95219BE617F8BAA4005A5BBA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95219BE417F8BAA4005A5BBA /* InfoPlist.strings */; };
 		95219BF417F8BBB1005A5BBA /* DTRequestVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 95219BF317F8BBB1005A5BBA /* DTRequestVerifier.m */; };
 		95219BF517F8BBB1005A5BBA /* DTRequestVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 95219BF317F8BBB1005A5BBA /* DTRequestVerifier.m */; };
-		95219BF717F8BC28005A5BBA /* DTRequestVerifierSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 95219BF617F8BC28005A5BBA /* DTRequestVerifierSpecs.m */; };
+		95219BF717F8BC28005A5BBA /* HTTPMethodHostSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 95219BF617F8BC28005A5BBA /* HTTPMethodHostSpecs.m */; };
+		956AE4B218098BD10027578E /* PathSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 956AE4B118098BD10027578E /* PathSpecs.m */; };
+		956AE4B718098C5E0027578E /* RequestVerifierTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 956AE4B618098C5E0027578E /* RequestVerifierTestCase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +51,10 @@
 		95219BE517F8BAA4005A5BBA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		95219BF217F8BBB1005A5BBA /* DTRequestVerifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTRequestVerifier.h; path = ../DTRequestVerifier/DTRequestVerifier.h; sourceTree = "<group>"; };
 		95219BF317F8BBB1005A5BBA /* DTRequestVerifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTRequestVerifier.m; path = ../DTRequestVerifier/DTRequestVerifier.m; sourceTree = "<group>"; };
-		95219BF617F8BC28005A5BBA /* DTRequestVerifierSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTRequestVerifierSpecs.m; sourceTree = "<group>"; };
+		95219BF617F8BC28005A5BBA /* HTTPMethodHostSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPMethodHostSpecs.m; sourceTree = "<group>"; };
+		956AE4B118098BD10027578E /* PathSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathSpecs.m; sourceTree = "<group>"; };
+		956AE4B518098C5E0027578E /* RequestVerifierTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestVerifierTestCase.h; sourceTree = "<group>"; };
+		956AE4B618098C5E0027578E /* RequestVerifierTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestVerifierTestCase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +136,10 @@
 		95219BE117F8BAA4005A5BBA /* DTRequestVerifierExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				95219BF617F8BC28005A5BBA /* DTRequestVerifierSpecs.m */,
+				956AE4B518098C5E0027578E /* RequestVerifierTestCase.h */,
+				956AE4B618098C5E0027578E /* RequestVerifierTestCase.m */,
+				95219BF617F8BC28005A5BBA /* HTTPMethodHostSpecs.m */,
+				956AE4B118098BD10027578E /* PathSpecs.m */,
 				95219BE217F8BAA4005A5BBA /* Supporting Files */,
 			);
 			path = DTRequestVerifierExampleTests;
@@ -260,7 +268,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				95219BF517F8BBB1005A5BBA /* DTRequestVerifier.m in Sources */,
-				95219BF717F8BC28005A5BBA /* DTRequestVerifierSpecs.m in Sources */,
+				956AE4B718098C5E0027578E /* RequestVerifierTestCase.m in Sources */,
+				956AE4B218098BD10027578E /* PathSpecs.m in Sources */,
+				95219BF717F8BC28005A5BBA /* HTTPMethodHostSpecs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +463,7 @@
 				95219BED17F8BAA4005A5BBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		95219BEE17F8BAA4005A5BBA /* Build configuration list for PBXNativeTarget "DTRequestVerifierExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -461,6 +472,7 @@
 				95219BF017F8BAA4005A5BBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

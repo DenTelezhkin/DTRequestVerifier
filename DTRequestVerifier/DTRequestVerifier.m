@@ -20,6 +20,7 @@
 
     verifier.HTTPMethod = @"GET";
     verifier.loggingEnabled = YES;
+    verifier.path = @"";
     
     return verifier;
 }
@@ -119,7 +120,7 @@
     
     if (!compareResult && self.loggingEnabled)
     {
-        NSLog(@"Expected params: %@ do not match received params: %@",expectedParams,receivedParams);
+        NSLog(@"Request expected body params: %@ do not match received params: %@",expectedParams,receivedParams);
     }
     return compareResult;
 }
