@@ -7,21 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		95219BC317F8BAA4005A5BBA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95219BC217F8BAA4005A5BBA /* Foundation.framework */; };
-		95219BC517F8BAA4005A5BBA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95219BC417F8BAA4005A5BBA /* CoreGraphics.framework */; };
-		95219BC717F8BAA4005A5BBA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95219BC617F8BAA4005A5BBA /* UIKit.framework */; };
 		95219BCD17F8BAA4005A5BBA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95219BCB17F8BAA4005A5BBA /* InfoPlist.strings */; };
 		95219BCF17F8BAA4005A5BBA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 95219BCE17F8BAA4005A5BBA /* main.m */; };
 		95219BD317F8BAA4005A5BBA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95219BD217F8BAA4005A5BBA /* AppDelegate.m */; };
-		95219BDC17F8BAA4005A5BBA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95219BDB17F8BAA4005A5BBA /* XCTest.framework */; };
-		95219BDD17F8BAA4005A5BBA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95219BC217F8BAA4005A5BBA /* Foundation.framework */; };
-		95219BDE17F8BAA4005A5BBA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95219BC617F8BAA4005A5BBA /* UIKit.framework */; };
 		95219BE617F8BAA4005A5BBA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95219BE417F8BAA4005A5BBA /* InfoPlist.strings */; };
 		95219BF417F8BBB1005A5BBA /* DTRequestVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 95219BF317F8BBB1005A5BBA /* DTRequestVerifier.m */; };
 		95219BF517F8BBB1005A5BBA /* DTRequestVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 95219BF317F8BBB1005A5BBA /* DTRequestVerifier.m */; };
 		95219BF717F8BC28005A5BBA /* HTTPMethodHostSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 95219BF617F8BC28005A5BBA /* HTTPMethodHostSpecs.m */; };
 		956AE4B218098BD10027578E /* PathSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 956AE4B118098BD10027578E /* PathSpecs.m */; };
 		956AE4B718098C5E0027578E /* RequestVerifierTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 956AE4B618098C5E0027578E /* RequestVerifierTestCase.m */; };
+		956AE4BC180AF2820027578E /* QueryParamsSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 956AE4BB180AF2820027578E /* QueryParamsSpecs.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,9 +31,6 @@
 
 /* Begin PBXFileReference section */
 		95219BBF17F8BAA4005A5BBA /* DTRequestVerifierExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DTRequestVerifierExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		95219BC217F8BAA4005A5BBA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		95219BC417F8BAA4005A5BBA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		95219BC617F8BAA4005A5BBA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		95219BCA17F8BAA4005A5BBA /* DTRequestVerifierExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DTRequestVerifierExample-Info.plist"; sourceTree = "<group>"; };
 		95219BCC17F8BAA4005A5BBA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		95219BCE17F8BAA4005A5BBA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -46,7 +38,6 @@
 		95219BD117F8BAA4005A5BBA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		95219BD217F8BAA4005A5BBA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		95219BDA17F8BAA4005A5BBA /* DTRequestVerifierExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DTRequestVerifierExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		95219BDB17F8BAA4005A5BBA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		95219BE317F8BAA4005A5BBA /* DTRequestVerifierExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DTRequestVerifierExampleTests-Info.plist"; sourceTree = "<group>"; };
 		95219BE517F8BAA4005A5BBA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		95219BF217F8BBB1005A5BBA /* DTRequestVerifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTRequestVerifier.h; path = ../DTRequestVerifier/DTRequestVerifier.h; sourceTree = "<group>"; };
@@ -55,6 +46,7 @@
 		956AE4B118098BD10027578E /* PathSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathSpecs.m; sourceTree = "<group>"; };
 		956AE4B518098C5E0027578E /* RequestVerifierTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestVerifierTestCase.h; sourceTree = "<group>"; };
 		956AE4B618098C5E0027578E /* RequestVerifierTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestVerifierTestCase.m; sourceTree = "<group>"; };
+		956AE4BB180AF2820027578E /* QueryParamsSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryParamsSpecs.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +54,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95219BC517F8BAA4005A5BBA /* CoreGraphics.framework in Frameworks */,
-				95219BC717F8BAA4005A5BBA /* UIKit.framework in Frameworks */,
-				95219BC317F8BAA4005A5BBA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,9 +61,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95219BDC17F8BAA4005A5BBA /* XCTest.framework in Frameworks */,
-				95219BDE17F8BAA4005A5BBA /* UIKit.framework in Frameworks */,
-				95219BDD17F8BAA4005A5BBA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,10 +90,6 @@
 		95219BC117F8BAA4005A5BBA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				95219BC217F8BAA4005A5BBA /* Foundation.framework */,
-				95219BC417F8BAA4005A5BBA /* CoreGraphics.framework */,
-				95219BC617F8BAA4005A5BBA /* UIKit.framework */,
-				95219BDB17F8BAA4005A5BBA /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,6 +122,7 @@
 				956AE4B618098C5E0027578E /* RequestVerifierTestCase.m */,
 				95219BF617F8BC28005A5BBA /* HTTPMethodHostSpecs.m */,
 				956AE4B118098BD10027578E /* PathSpecs.m */,
+				956AE4BB180AF2820027578E /* QueryParamsSpecs.m */,
 				95219BE217F8BAA4005A5BBA /* Supporting Files */,
 			);
 			path = DTRequestVerifierExampleTests;
@@ -269,6 +252,7 @@
 			files = (
 				95219BF517F8BBB1005A5BBA /* DTRequestVerifier.m in Sources */,
 				956AE4B718098C5E0027578E /* RequestVerifierTestCase.m in Sources */,
+				956AE4BC180AF2820027578E /* QueryParamsSpecs.m in Sources */,
 				956AE4B218098BD10027578E /* PathSpecs.m in Sources */,
 				95219BF717F8BC28005A5BBA /* HTTPMethodHostSpecs.m in Sources */,
 			);

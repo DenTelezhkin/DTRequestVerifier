@@ -71,17 +71,24 @@
 
 -(BOOL)verifyQueryParams:(NSDictionary *)expectedQueryParams
 {
-    if (!expectedQueryParams)
-    {
-        return YES;
-    }
     NSString * query = [self.request.URL query];
     
     NSArray * params = [query componentsSeparatedByString:@"&"];
+    if (!params && !self.queryParams)
+    {
+        return YES;
+    }
     NSMutableDictionary * receivedParams = [NSMutableDictionary dictionary];
     for (NSString * paramQuery in params)
     {
         NSArray * paramParts = [paramQuery componentsSeparatedByString:@"="];
+        
+        if ([paramParts count]<2)
+        {
+            [self logMessage:[NSString stringWithFormat:@"query parameter incorrectly formatted: %@",paramQuery]];
+            return NO;
+        }
+        
         receivedParams[paramParts[0]] = [paramParts[1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     }
     

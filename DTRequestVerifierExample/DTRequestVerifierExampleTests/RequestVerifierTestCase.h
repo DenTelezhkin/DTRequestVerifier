@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Denys Telezhkin. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+@import XCTest;
 #import "DTRequestVerifier.h"
 
 @interface RequestVerifierTestCase : XCTestCase
