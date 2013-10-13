@@ -61,6 +61,6 @@ NSString *path =[[NSBundle mainBundle] pathForResource:@"Example" ofType:@"json"
 
 ## Roadmap
 
-* Support for raw parameters query in body data
-* Support for multipart requests verification
+* Support for raw parameters http body serialization
+* Support for plist serialization
 * CocoaPods!
