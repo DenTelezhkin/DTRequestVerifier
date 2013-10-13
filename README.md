@@ -6,12 +6,14 @@ Easy, extensible NSURLRequest verification for unit testing.
 ### Sample usage with XCTest:
 
 ```objective-c
-NSURL * url = [NSURL URLWithString:@"www.google.com/test?query=foo&data=bar"] 
+NSURL * url = [NSURL URLWithString:@"www.google.com/test?query=foo&count=5"] 
 NSURLRequest * request = [[NSURLRequest alloc] initWithURL:url];
+
 DTRequestVerifier * verifier = [DTRequestVerifier verifier];
 verifier.host = @"www.google.com";
 verifier.path = @"/test";
-verifier.queryParams = @{@"query":@"foo",@"data":@"bar"};
+verifier.queryParams = @{@"query":@"foo",@"count":@"5"};
+
 XCTAssertFalse([verifier verifyRequest:request], @"");
 ```
 
@@ -32,6 +34,7 @@ verifier.host = @"www.google.com";
 verifier.path = @"/user/create";
 verifier.HTTPMethod = @"POST";
 verifier.bodyParams = parameters;
+
 XCTAssertFalse([verifier verifyRequest:request], @"");
 ```
 
