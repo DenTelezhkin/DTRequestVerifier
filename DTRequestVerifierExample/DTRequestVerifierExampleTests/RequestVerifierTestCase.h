@@ -12,6 +12,6 @@
 @interface RequestVerifierTestCase : XCTestCase
 
 @property (nonatomic, strong) DTRequestVerifier * verifier;
-@property (nonatomic, strong) NSURLRequest * request;
+@property (nonatomic, strong) NSMutableURLRequest * request;
 
 @end

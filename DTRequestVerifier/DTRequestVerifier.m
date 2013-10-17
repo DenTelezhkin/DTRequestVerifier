@@ -21,6 +21,7 @@
     verifier.HTTPMethod = @"GET";
     verifier.loggingEnabled = YES;
     verifier.path = @"";
+    verifier.bodySerializationType = DTBodySerializationTypeJSON;
     
     return verifier;
 }
@@ -32,6 +33,85 @@
         NSLog(@"DTRequestVerifier. %@",message);
     }
 }
+
+-(void)logError:(NSError *)error
+{
+    if (error)
+    {
+        [self logMessage:[error description]];
+    }
+}
+
+#pragma mark - serialization
+
+-(NSDictionary *)keyValuePartsFromQuery:(NSString *)query
+{
+    NSArray * params = [query componentsSeparatedByString:@"&"];
+    if (!params)
+    {
+        return nil;
+    }
+    
+    NSMutableDictionary * receivedParams = [NSMutableDictionary dictionary];
+    for (NSString * paramQuery in params)
+    {
+        NSArray * paramParts = [paramQuery componentsSeparatedByString:@"="];
+        
+        if ([paramParts count]<2)
+        {
+            [self logMessage:[NSString stringWithFormat:@"query parameter incorrectly formatted: %@",paramQuery]];
+            return nil;
+        }
+        
+        receivedParams[paramParts[0]] = [paramParts[1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    }
+    return receivedParams;
+}
+
+
+-(id)jsonObjectFromData:(NSData *)data
+{
+    NSError * error = nil;
+    id serializedObject = [NSJSONSerialization JSONObjectWithData:[self.request HTTPBody]
+                                                          options:NSJSONReadingAllowFragments
+                                                            error:&error];
+    [self logError:error];
+    return serializedObject;
+}
+
+-(id)plistObjectFromData:(NSData *)data
+{
+    if (!data)
+    {
+        return nil;
+    }
+    NSError * error = nil;
+    id serializedObject = [NSPropertyListSerialization propertyListWithData:data
+                                                                    options:0
+                                                                     format:nil
+                                                                      error:&error];
+    [self logError:error];
+    return serializedObject;
+}
+
+-(id)deserializeHTTPBody
+{
+    switch (self.bodySerializationType) {
+        case DTBodySerializationTypeRaw:
+        {
+            NSString * query = [[NSString alloc] initWithData:self.request.HTTPBody
+                                                     encoding:NSUTF8StringEncoding];
+            return [self keyValuePartsFromQuery:query];
+        }
+        case DTBodySerializationTypeJSON:
+            return [self jsonObjectFromData:self.request.HTTPBody];
+        case DTBodySerializationTypePlist:
+            return [self plistObjectFromData:self.request.HTTPBody];
+    }
+    return nil;
+}
+
+#pragma mark - verification
 
 -(BOOL)verifyRequest:(NSURLRequest *)request
 {
@@ -73,41 +153,25 @@
 {
     NSString * query = [self.request.URL query];
     
-    NSArray * params = [query componentsSeparatedByString:@"&"];
-    if (!params && !self.queryParams)
+    
+    NSDictionary * keyValuePairs = [self keyValuePartsFromQuery:query];
+    
+    if (!keyValuePairs && !self.queryParams)
     {
         return YES;
     }
-    NSMutableDictionary * receivedParams = [NSMutableDictionary dictionary];
-    for (NSString * paramQuery in params)
-    {
-        NSArray * paramParts = [paramQuery componentsSeparatedByString:@"="];
-        
-        if ([paramParts count]<2)
-        {
-            [self logMessage:[NSString stringWithFormat:@"query parameter incorrectly formatted: %@",paramQuery]];
-            return NO;
-        }
-        
-        receivedParams[paramParts[0]] = [paramParts[1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    }
-    
     return [self verifyParams:expectedQueryParams
-                   withParams:receivedParams];
+                   withParams:keyValuePairs];
 }
 
 -(BOOL)verifyBodyParams:(NSDictionary *)expectedBodyDictionary
 {
-    if (!expectedBodyDictionary || ![expectedBodyDictionary count])
-        return YES;
-    
-    if (![self.request HTTPBody])
+    if (![self.request HTTPBody] && (![expectedBodyDictionary count]))
     {
-        return NO;
+        return YES;
     }
-    NSDictionary * params = [NSJSONSerialization JSONObjectWithData:[self.request HTTPBody]
-                                                            options:NSJSONReadingAllowFragments
-                                                              error:nil];
+    NSDictionary * params = [self deserializeHTTPBody];
+    
     return  [self verifyParams:expectedBodyDictionary
                     withParams:params];
 }
