@@ -29,6 +29,9 @@ typedef NS_ENUM(NSInteger, DTBodySerializationType) {
 @property (nonatomic, strong) NSString * host;
 @property (nonatomic, strong) NSString * path;
 
+@property (nonatomic, strong) NSDictionary * HTTPHeaderFields;
+
+
 /**
  Query params keys should be NSStrings
  */

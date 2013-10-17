@@ -135,13 +135,19 @@
         return NO;
     }
     
-    if (![self verifyQueryParams:self.queryParams])
+    if (![self verifyHTTPHeaderFields])
+    {
+        [self logMessage:[NSString stringWithFormat:@"Request HTTP Header fields: %@ do not match expected HTTP Header fields : %@",[request allHTTPHeaderFields],self.HTTPHeaderFields]];
+        return NO;
+    }
+    
+    if (![self verifyQueryParams])
     {
         [self logMessage:[NSString stringWithFormat:@"Request query params: %@ do not match expected params : %@",request,self.queryParams]];
         return NO;
     }
     
-    if (![self verifyBodyParams:self.bodyParams])
+    if (![self verifyBodyParams])
     {
         return NO;
     }
@@ -149,7 +155,20 @@
     return YES;
 }
 
--(BOOL)verifyQueryParams:(NSDictionary *)expectedQueryParams
+-(BOOL)verifyHTTPHeaderFields
+{
+    for (NSString * key in [self.HTTPHeaderFields allKeys])
+    {
+        id value = [self.request valueForHTTPHeaderField:key];
+        if (![value isEqual:self.HTTPHeaderFields[key]])
+        {
+            return NO;
+        }
+    }
+    return YES;
+}
+
+-(BOOL)verifyQueryParams
 {
     NSString * query = [self.request.URL query];
     
@@ -160,19 +179,19 @@
     {
         return YES;
     }
-    return [self verifyParams:expectedQueryParams
+    return [self verifyParams:self.queryParams
                    withParams:keyValuePairs];
 }
 
--(BOOL)verifyBodyParams:(NSDictionary *)expectedBodyDictionary
+-(BOOL)verifyBodyParams
 {
-    if (![self.request HTTPBody] && (![expectedBodyDictionary count]))
+    if (![self.request HTTPBody] && (![self.bodyParams count]))
     {
         return YES;
     }
     NSDictionary * params = [self deserializeHTTPBody];
     
-    return  [self verifyParams:expectedBodyDictionary
+    return  [self verifyParams:self.bodyParams
                     withParams:params];
 }
 
