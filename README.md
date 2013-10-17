@@ -3,6 +3,15 @@ DTRequestVerifier
 
 Easy, extensible NSURLRequest verification for unit testing.
 
+### Supported properties:
+* HTTP method
+* Host
+* Path
+* Query parameters
+* Body parameters (Raw, JSON, Plist)
+* HTTP header fields
+* any other NSURLRequest property via subclassing
+
 ### Sample usage with XCTest:
 
 ```objective-c
@@ -14,7 +23,7 @@ verifier.host = @"www.google.com";
 verifier.path = @"/test";
 verifier.queryParams = @{@"query":@"foo",@"count":@"5"};
 
-XCTAssertFalse([verifier verifyRequest:request], @"");
+XCTAssertFalse([verifier verifyRequest:request]);
 ```
 
 ### Advanced example
@@ -35,7 +44,7 @@ verifier.path = @"/user/create";
 verifier.HTTPMethod = @"POST";
 verifier.bodyParams = parameters;
 
-XCTAssertFalse([verifier verifyRequest:request], @"");
+XCTAssertFalse([verifier verifyRequest:request]);
 ```
 
 ### OHHTTPStubs
@@ -57,10 +66,4 @@ NSString *path =[[NSBundle mainBundle] pathForResource:@"Example" ofType:@"json"
 
 ### Best practices
 
-[AFNetworking 2.0](https://github.com/AFNetworking/AFNetworking) introduced great request serialization system, that can greatly reduce amount of code needed to create NSURLRequests. You should definitely check it out! =)
-
-## Roadmap
-
-* Support for raw parameters http body serialization
-* Support for plist serialization
-* CocoaPods!
+[AFNetworking 2.0](https://github.com/AFNetworking/AFNetworking) introduced great request serialization system, that can greatly reduce amount of code needed to create NSURLRequests. You should definitely check it out!
