@@ -17,7 +17,7 @@
 +(instancetype)verifier
 {
     DTRequestVerifier * verifier = [self new];
-
+    
     verifier.HTTPMethod = @"GET";
     verifier.loggingEnabled = YES;
     verifier.path = @"";
@@ -30,7 +30,8 @@
 {
     if (self.loggingEnabled)
     {
-        NSLog(@"DTRequestVerifier. %@",message);
+        NSLog(@"DTRequestVerifier. Request failed to pass verification:\n %@  \nReason: %@",self.request,message);
+        NSLog(@"%@",[self description]);
     }
 }
 
@@ -40,6 +41,30 @@
     {
         [self logMessage:[error description]];
     }
+}
+
+-(NSString *)description
+{
+    NSMutableString * expectedValues = [NSMutableString stringWithFormat:@"Expected values:\n"
+                                        "HTTPMethod : %@ \n"
+                                        "host : %@ \n",self.HTTPMethod,self.host];
+    if (self.path && ![self.path isEqualToString:@""])
+    {
+        [expectedValues appendFormat:@"path : %@ \n",self.path];
+    }
+    if (self.HTTPHeaderFields)
+    {
+        [expectedValues appendFormat:@"HTTPHeaderFields : %@ \n",self.HTTPHeaderFields];
+    }
+    if (self.queryParams)
+    {
+        [expectedValues appendFormat:@"queryParams : %@ \n",self.queryParams];
+    }
+    if (self.bodyParams)
+    {
+        [expectedValues appendFormat:@"bodyParams : %@ \n",self.bodyParams];
+    }
+    return expectedValues;
 }
 
 #pragma mark - serialization
@@ -119,31 +144,31 @@
     
     if (![request.HTTPMethod isEqualToString:self.HTTPMethod])
     {
-        [self logMessage:[NSString stringWithFormat:@"HTTP Method for request: %@ does not match expected value: %@",request,self.HTTPMethod]];
+        [self logMessage:[NSString stringWithFormat:@"HTTP Method: %@ does not match",[request HTTPMethod]]];
         return NO;
     }
     
     if (![[request.URL host] isEqualToString:self.host])
     {
-        [self logMessage:[NSString stringWithFormat:@"Request host: %@ does not match expected value : %@",[[request URL] host],self.host]];
+        [self logMessage:[NSString stringWithFormat:@"Request host: %@ does not match",[[request URL] host]]];
         return NO;
     }
     
     if (![[request.URL path] isEqualToString:self.path])
     {
-        [self logMessage:[NSString stringWithFormat:@"Request path: %@ does not match expected value : %@",[[request URL] path],self.path]];
+        [self logMessage:[NSString stringWithFormat:@"Request path: %@ does not match",[[request URL] path]]];
         return NO;
     }
     
     if (![self verifyHTTPHeaderFields])
     {
-        [self logMessage:[NSString stringWithFormat:@"Request HTTP Header fields: %@ do not match expected HTTP Header fields : %@",[request allHTTPHeaderFields],self.HTTPHeaderFields]];
+        [self logMessage:[NSString stringWithFormat:@"Request HTTP Header fields: %@ do not match",[request allHTTPHeaderFields]]];
         return NO;
     }
     
     if (![self verifyQueryParams])
     {
-        [self logMessage:[NSString stringWithFormat:@"Request query params: %@ do not match expected params : %@",request,self.queryParams]];
+        [self logMessage:[NSString stringWithFormat:@"Request query params: %@ do not match",request]];
         return NO;
     }
     
@@ -210,7 +235,7 @@
     
     if (!compareResult && self.loggingEnabled)
     {
-        NSLog(@"Request expected body params: %@ do not match received params: %@",expectedParams,receivedParams);
+        NSLog(@"Request body params do not match: %@ ",receivedParams);
     }
     return compareResult;
 }
