@@ -1,4 +1,4 @@
-![CocoaPod platform](http://cocoapod-badges.herokuapp.com/p/DTRequestVerifier/badge.png) &nbsp; ![CocoaPod version](http://cocoapod-badges.herokuapp.com/v/DTRequestVerifier/badge.png) &nbsp; ![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)
+![CocoaPod platform](https://cocoapod-badges.herokuapp.com/p/DTRequestVerifier/badge.png) &nbsp; ![CocoaPod version](https://cocoapod-badges.herokuapp.com/v/DTRequestVerifier/badge.png) &nbsp; ![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)
 
 DTRequestVerifier
 =================
