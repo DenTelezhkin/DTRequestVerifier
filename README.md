@@ -25,7 +25,7 @@ verifier.host = @"www.google.com";
 verifier.path = @"/test";
 verifier.queryParams = @{@"query":@"foo",@"count":@"5"};
 
-XCTAssertFalse([verifier verifyRequest:request]);
+XCTAssert([verifier verifyRequest:request]);
 ```
 
 ### Advanced example
@@ -46,7 +46,7 @@ verifier.path = @"/user/create";
 verifier.HTTPMethod = @"POST";
 verifier.bodyParams = parameters;
 
-XCTAssertFalse([verifier verifyRequest:request]);
+XCTAssert([verifier verifyRequest:request]);
 ```
 
 ### OHHTTPStubs
