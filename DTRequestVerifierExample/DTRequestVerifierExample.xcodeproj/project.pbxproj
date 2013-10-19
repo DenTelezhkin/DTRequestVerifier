@@ -14,6 +14,7 @@
 		95219BF417F8BBB1005A5BBA /* DTRequestVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 95219BF317F8BBB1005A5BBA /* DTRequestVerifier.m */; };
 		95219BF517F8BBB1005A5BBA /* DTRequestVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 95219BF317F8BBB1005A5BBA /* DTRequestVerifier.m */; };
 		95219BF717F8BC28005A5BBA /* HTTPMethodHostSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 95219BF617F8BC28005A5BBA /* HTTPMethodHostSpecs.m */; };
+		956ABF351812CFF4007FD680 /* SchemeSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 956ABF341812CFF4007FD680 /* SchemeSpecs.m */; };
 		956AE4B218098BD10027578E /* PathSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 956AE4B118098BD10027578E /* PathSpecs.m */; };
 		956AE4B718098C5E0027578E /* RequestVerifierTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 956AE4B618098C5E0027578E /* RequestVerifierTestCase.m */; };
 		956AE4BC180AF2820027578E /* QueryParamsSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 956AE4BB180AF2820027578E /* QueryParamsSpecs.m */; };
@@ -45,6 +46,7 @@
 		95219BF217F8BBB1005A5BBA /* DTRequestVerifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTRequestVerifier.h; path = ../DTRequestVerifier/DTRequestVerifier.h; sourceTree = "<group>"; };
 		95219BF317F8BBB1005A5BBA /* DTRequestVerifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTRequestVerifier.m; path = ../DTRequestVerifier/DTRequestVerifier.m; sourceTree = "<group>"; };
 		95219BF617F8BC28005A5BBA /* HTTPMethodHostSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPMethodHostSpecs.m; sourceTree = "<group>"; };
+		956ABF341812CFF4007FD680 /* SchemeSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchemeSpecs.m; sourceTree = "<group>"; };
 		956AE4B118098BD10027578E /* PathSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathSpecs.m; sourceTree = "<group>"; };
 		956AE4B518098C5E0027578E /* RequestVerifierTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestVerifierTestCase.h; sourceTree = "<group>"; };
 		956AE4B618098C5E0027578E /* RequestVerifierTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestVerifierTestCase.m; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				956AE4BB180AF2820027578E /* QueryParamsSpecs.m */,
 				AA0A8124181001BC00182BD3 /* BodyParamsSpecs.m */,
 				AA0A812618101A2300182BD3 /* HTTPHeadersSpecs.m */,
+				956ABF341812CFF4007FD680 /* SchemeSpecs.m */,
 				95219BE217F8BAA4005A5BBA /* Supporting Files */,
 			);
 			path = DTRequestVerifierExampleTests;
@@ -259,6 +262,7 @@
 				95219BF517F8BBB1005A5BBA /* DTRequestVerifier.m in Sources */,
 				956AE4B718098C5E0027578E /* RequestVerifierTestCase.m in Sources */,
 				956AE4BC180AF2820027578E /* QueryParamsSpecs.m in Sources */,
+				956ABF351812CFF4007FD680 /* SchemeSpecs.m in Sources */,
 				956AE4B218098BD10027578E /* PathSpecs.m in Sources */,
 				AA0A8125181001BC00182BD3 /* BodyParamsSpecs.m in Sources */,
 				95219BF717F8BC28005A5BBA /* HTTPMethodHostSpecs.m in Sources */,

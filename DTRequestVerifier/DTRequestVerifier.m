@@ -19,6 +19,7 @@
     DTRequestVerifier * verifier = [self new];
     
     verifier.HTTPMethod = @"GET";
+    verifier.scheme = @"http";
     verifier.loggingEnabled = YES;
     verifier.path = @"";
     verifier.bodySerializationType = DTBodySerializationTypeJSON;
@@ -145,6 +146,12 @@
     if (![request.HTTPMethod isEqualToString:self.HTTPMethod])
     {
         [self logMessage:[NSString stringWithFormat:@"HTTP Method: %@ does not match",[request HTTPMethod]]];
+        return NO;
+    }
+    
+    if (![request.URL.scheme isEqualToString:self.scheme])
+    {
+        [self logMessage:[NSString stringWithFormat:@"Scheme: %@ does not match",[request.URL scheme]]];
         return NO;
     }
     

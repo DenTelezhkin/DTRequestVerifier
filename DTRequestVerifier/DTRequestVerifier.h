@@ -24,6 +24,11 @@ typedef NS_ENUM(NSInteger, DTBodySerializationType) {
 @property (nonatomic, strong) NSString * HTTPMethod;
 
 /**
+ NSURL's expected scheme. Defaults to @"http".
+ */
+@property (nonatomic, strong) NSString * scheme;
+
+/**
  NSURLRequest expected host.
  */
 @property (nonatomic, strong) NSString * host;
