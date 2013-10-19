@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "DTRequestVerifier"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "Easy, extensible NSURLRequest verification"
   s.homepage     = "https://github.com/DenHeadless/DTRequestVerifier"
   s.license      = 'MIT'
