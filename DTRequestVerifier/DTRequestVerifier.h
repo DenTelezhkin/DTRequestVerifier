@@ -15,7 +15,6 @@ typedef NS_ENUM(NSInteger, DTBodySerializationType) {
 /**
  `DTRequestVerifier` class is used to verify NSURLRequests. Set all desired properties you want to verify on NSURLRequest and call -verifyRequest: method.
  */
-
 @interface DTRequestVerifier : NSObject
 
 /**
@@ -76,7 +75,6 @@ typedef NS_ENUM(NSInteger, DTBodySerializationType) {
  @param request NSURLRequest object to verify
  @return result of verification
  */
-
 -(BOOL)verifyRequest:(NSURLRequest *)request;
 
 @end
