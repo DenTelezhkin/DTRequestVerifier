@@ -6,6 +6,7 @@ Easy, extensible NSURLRequest verification for unit testing.
 
 ### Supported properties:
 * HTTP method
+* Scheme
 * Host
 * Path
 * Query parameters
