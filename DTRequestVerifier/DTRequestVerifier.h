@@ -13,7 +13,7 @@ typedef NS_ENUM(NSInteger, DTBodySerializationType) {
 };
 
 /**
- `DTRequestVerifier` class is used to verify NSURLRequests. Set all desired properties you wan't to verify on NSURLRequest and call -verifyRequest: method.
+ `DTRequestVerifier` class is used to verify NSURLRequests. Set all desired properties you want to verify on NSURLRequest and call -verifyRequest: method.
  */
 
 @interface DTRequestVerifier : NSObject
