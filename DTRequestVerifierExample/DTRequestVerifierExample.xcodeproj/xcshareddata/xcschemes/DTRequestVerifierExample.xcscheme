@@ -28,6 +28,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "95219BD917F8BAA4005A5BBA"
+               BuildableName = "DTRequestVerifierExampleTests.xctest"
+               BlueprintName = "DTRequestVerifierExampleTests"
+               ReferencedContainer = "container:DTRequestVerifierExample.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
