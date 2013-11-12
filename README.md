@@ -14,6 +14,11 @@ Easy, extensible NSURLRequest verification for unit testing.
 * HTTP header fields
 * any other NSURLRequest property via subclassing
 
+
+### Requirements:
+* iOS 5
+* Mac OS X 10.7
+
 ### Sample usage with XCTest:
 
 ```objective-c
