@@ -1,3 +1,4 @@
+![Build Status](https://travis-ci.org/DenHeadless/DTRequestVerifier.png?branch=master,develop) &nbsp;
 ![CocoaPod platform](https://cocoapod-badges.herokuapp.com/p/DTRequestVerifier/badge.png) &nbsp; ![CocoaPod version](https://cocoapod-badges.herokuapp.com/v/DTRequestVerifier/badge.png) &nbsp; ![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)
 DTRequestVerifier
 =================
