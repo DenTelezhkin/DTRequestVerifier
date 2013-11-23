@@ -1,0 +1,6 @@
+language: objective-c
+
+before_install:
+  - cd DTRequestVerifierExample
+  
+script: xcodebuild clean test -scheme 'DTRequestVerifierExampleTests' -destination "name=iPhone Retina (4-inch),OS=7.0"
