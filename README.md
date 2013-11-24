@@ -75,3 +75,7 @@ NSString *path =[[NSBundle mainBundle] pathForResource:@"Example" ofType:@"json"
 ### Best practices
 
 [AFNetworking 2.0](https://github.com/AFNetworking/AFNetworking) introduced great request serialization system, that can greatly reduce amount of code needed to create NSURLRequests. You should definitely check it out!
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/DenHeadless/dtrequestverifier/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
