@@ -2,5 +2,6 @@ language: objective-c
 
 before_install:
   - cd DTRequestVerifierExample
+  - sudo gem install xcpretty
   
-script: xcodebuild clean test -scheme 'DTRequestVerifierExample' -destination "name=iPhone Retina (4-inch),OS=7.0"
+script: xcodebuild clean test -scheme 'DTRequestVerifierExample' -destination "name=iPhone Retina (4-inch),OS=7.0" | xcpretty -tc
