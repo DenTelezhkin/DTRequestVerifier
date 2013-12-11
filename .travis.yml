@@ -1,7 +1,7 @@
 language: objective-c
 
 before_install:
-  - cd DTRequestVerifierExample
   - sudo gem install xcpretty
-  
+  - cd DTRequestVerifierTests
+    
 script: rake
