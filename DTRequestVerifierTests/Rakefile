@@ -2,12 +2,12 @@ namespace :test do
 
   desc "Run the DTRequestVerifier Tests for iOS"
   task :ios do
-    $ios_success = system("xcodebuild test -scheme 'iOS Tests' -destination 'name=iPhone Retina (4-inch),OS=7.0'")
+    $ios_success = system("xcodebuild test -scheme 'iOS Tests' -destination 'name=iPhone Retina (4-inch),OS=7.0' | xcpretty -tc; test ${PIPESTATUS[0]} -eq 0")
   end
 
   desc "Run the DTRequestVerifier Tests for Mac OS X"
   task :osx do
-    $osx_success = system("xcodebuild test -scheme 'OS X Tests'")
+    $osx_success = system("xcodebuild test -scheme 'OS X Tests' | xcpretty -tc; test ${PIPESTATUS[0]} -eq 0")
   end
 end
 
