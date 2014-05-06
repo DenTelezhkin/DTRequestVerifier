@@ -5,6 +5,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/DenHeadless/DTRequestVerifier"
   s.license      = 'MIT'
   s.author       = { "Denys Telezhkin" => "denys.telezhkin@yandex.ru" }
+  s.social_media_url = 'https://twitter.com/DTCoder'
   s.source       = { :git => "https://github.com/DenHeadless/DTRequestVerifier.git", :tag => s.version.to_s }
   s.ios.deployment_target = '5.0'
   s.osx.deployment_target = '10.7'
