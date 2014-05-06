@@ -114,6 +114,10 @@
 
 -(id)jsonObjectFromData:(NSData *)data
 {
+    if (!data)
+    {
+        return nil;
+    }
     NSError * error = nil;
     id serializedObject = [NSJSONSerialization JSONObjectWithData:[self.request HTTPBody]
                                                           options:NSJSONReadingAllowFragments

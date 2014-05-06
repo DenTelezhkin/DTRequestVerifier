@@ -44,12 +44,21 @@
     XCTAssert([self.verifier verifyRequest:self.request]);
 }
 
--(void)testNilBody
+-(void)testNilParamsForNotEmptyBody
 {
     NSDictionary * params = @{@"query":@"bar",@"count":@"5"};
     
     [self.request setHTTPBody:[NSJSONSerialization dataWithJSONObject:params
                                                               options:0 error:nil]];
+    XCTAssertFalse([self.verifier verifyRequest:self.request]);
+}
+
+-(void)testNilBodyForNotEmptyParams
+{
+    NSDictionary * params = @{@"query":@"bar",@"count":@"5"};
+    
+    self.verifier.bodyParams = params;
+    
     XCTAssertFalse([self.verifier verifyRequest:self.request]);
 }
 
