@@ -22,6 +22,7 @@
     
     NSURL * url = [NSURL URLWithString:@"http://www.foo.com/bar"];
     self.request = [NSMutableURLRequest requestWithURL:url];
+    self.verifier.raiseExceptionOnFailure = NO;
 }
 
 -(void)testPath

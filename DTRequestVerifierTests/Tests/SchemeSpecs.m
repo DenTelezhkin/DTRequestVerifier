@@ -23,6 +23,7 @@
     
     NSURL * url = [NSURL URLWithString:@"https://www.foo.com"];
     self.request = [NSMutableURLRequest requestWithURL:url];
+    self.verifier.raiseExceptionOnFailure = NO;
 }
 
 -(void)testSchemeValidation

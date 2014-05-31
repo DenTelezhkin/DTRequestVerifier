@@ -38,14 +38,22 @@
     verifier.HTTPMethod = @"GET";
     verifier.scheme = @"http";
     verifier.loggingEnabled = YES;
+    verifier.raiseExceptionOnFailure = YES;
     verifier.path = @"";
     verifier.bodySerializationType = DTBodySerializationTypeJSON;
     
     return verifier;
 }
 
--(void)logMessage:(NSString *)message
+-(void)handleFailureWithReason:(NSString *)message
 {
+    if (self.raiseExceptionOnFailure)
+    {
+        NSException * exception = [[NSException alloc] initWithName:@"DTRequestVerifier wrong request"
+                                                             reason:message
+                                                           userInfo:nil];
+        [exception raise];
+    }
     if (self.loggingEnabled)
     {
         NSLog(@"DTRequestVerifier. Request failed to pass verification:\n %@  \nReason: %@",self.request,message);
@@ -57,7 +65,7 @@
 {
     if (error)
     {
-        [self logMessage:[error description]];
+        [self handleFailureWithReason:[error description]];
     }
 }
 
@@ -102,7 +110,7 @@
         
         if ([paramParts count]<2)
         {
-            [self logMessage:[NSString stringWithFormat:@"query parameter incorrectly formatted: %@",paramQuery]];
+            [self handleFailureWithReason:[NSString stringWithFormat:@"query parameter incorrectly formatted: %@",paramQuery]];
             return nil;
         }
         
@@ -111,6 +119,16 @@
     return receivedParams;
 }
 
+-(NSString *)queryFromDictionary:(NSDictionary *)queryParts
+{
+    NSMutableString * string = [NSMutableString string];
+    
+    for (NSString * key in queryParts)
+    {
+        [string appendFormat:@"%@=%@",key,queryParts[key]];
+    }
+    return string;
+}
 
 -(id)jsonObjectFromData:(NSData *)data
 {
@@ -166,37 +184,37 @@
     
     if (![request.HTTPMethod isEqualToString:self.HTTPMethod])
     {
-        [self logMessage:[NSString stringWithFormat:@"HTTP Method: %@ does not match",[request HTTPMethod]]];
+        [self handleFailureWithReason:[NSString stringWithFormat:@"HTTP Method: %@, expected %@",[request HTTPMethod],self.HTTPMethod]];
         return NO;
     }
     
     if (![request.URL.scheme isEqualToString:self.scheme])
     {
-        [self logMessage:[NSString stringWithFormat:@"Scheme: %@ does not match",[request.URL scheme]]];
+        [self handleFailureWithReason:[NSString stringWithFormat:@"Scheme: %@, expected: %@",[request.URL scheme], self.scheme]];
         return NO;
     }
     
     if (![[request.URL host] isEqualToString:self.host])
     {
-        [self logMessage:[NSString stringWithFormat:@"Request host: %@ does not match",[[request URL] host]]];
+        [self handleFailureWithReason:[NSString stringWithFormat:@"Request host: %@, expected: %@",[[request URL] host], self.host]];
         return NO;
     }
     
     if (![[request.URL path] isEqualToString:self.path])
     {
-        [self logMessage:[NSString stringWithFormat:@"Request path: %@ does not match",[[request URL] path]]];
+        [self handleFailureWithReason:[NSString stringWithFormat:@"Request path: %@, expected: %@",[[request URL] path],self.path]];
         return NO;
     }
     
     if (![self verifyHTTPHeaderFields])
     {
-        [self logMessage:[NSString stringWithFormat:@"Request HTTP Header fields: %@ do not match",[request allHTTPHeaderFields]]];
+        [self handleFailureWithReason:[NSString stringWithFormat:@"Request HTTP Header fields do not match expected ones"]];
         return NO;
     }
     
     if (![self verifyQueryParams])
     {
-        [self logMessage:[NSString stringWithFormat:@"Request query params: %@ do not match",request]];
+        [self handleFailureWithReason:[NSString stringWithFormat:@"Request query params: %@, expected: %@",request.URL.query,[self queryFromDictionary:self.queryParams]]];
         return NO;
     }
     
@@ -261,9 +279,9 @@
         compareResult = [expectedParams isEqualToDictionary:receivedParams];
     }
     
-    if (!compareResult && self.loggingEnabled)
+    if (!compareResult)
     {
-        NSLog(@"Request body params do not match: %@ ",receivedParams);
+        [self handleFailureWithReason:@"Request body params do not match"];
     }
     return compareResult;
 }

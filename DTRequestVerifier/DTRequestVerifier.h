@@ -82,6 +82,13 @@ typedef NS_ENUM(NSInteger, DTBodySerializationType) {
 @property (nonatomic, assign) BOOL loggingEnabled;
 
 /**
+ Raise exception if verifyRequest: method fails. 
+ 
+ Default value is YES.
+ */
+@property (nonatomic, assign) BOOL raiseExceptionOnFailure;
+
+/**
  Creates and returns `DTRequestVerifier` object.
  */
 +(instancetype)verifier;

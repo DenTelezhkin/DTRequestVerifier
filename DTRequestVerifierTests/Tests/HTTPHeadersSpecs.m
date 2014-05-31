@@ -23,6 +23,7 @@
     
     NSURL * url = [NSURL URLWithString:@"http://www.foo.com"];
     self.request = [NSMutableURLRequest requestWithURL:url];
+    self.verifier.raiseExceptionOnFailure = NO;
 }
 
 -(void)testEmptyHeaderExpectationsShouldPass
@@ -45,7 +46,6 @@
 -(void)testHeaderExpectationsShouldFail
 {
     self.verifier.HTTPHeaderFields = @{@"Authorization": @"foo"};
-    
     XCTAssertFalse([self.verifier verifyRequest:self.request]);
 }
 

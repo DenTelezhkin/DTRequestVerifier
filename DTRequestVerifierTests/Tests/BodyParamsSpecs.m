@@ -23,6 +23,7 @@
     
     NSURL * url = [NSURL URLWithString:@"http://www.foo.com"];
     self.request = [NSMutableURLRequest requestWithURL:url];
+    self.verifier.raiseExceptionOnFailure = NO;
 }
 
 -(void)testDefaultSerializationTypeRaw
@@ -148,7 +149,7 @@
 {
     NSData * data = [@"query=bar&count=5" dataUsingEncoding:NSUTF8StringEncoding];
     [self.request setHTTPBody:data];
-    
+    self.verifier.bodySerializationType = DTBodySerializationTypeRaw;
     XCTAssertFalse([self.verifier verifyRequest:self.request]);
 }
 
@@ -158,7 +159,7 @@
     [self.request setHTTPBody:data];
     
     self.verifier.bodyParams = @{@"query":@"bar"};
-    
+    self.verifier.bodySerializationType = DTBodySerializationTypeRaw;
     XCTAssertFalse([self.verifier verifyRequest:self.request]);
 }
 

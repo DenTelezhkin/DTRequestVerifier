@@ -19,6 +19,7 @@
     
     NSURL * url = [NSURL URLWithString:@"http://www.foo.com"];
     self.request = [NSMutableURLRequest requestWithURL:url];
+    self.verifier.raiseExceptionOnFailure = NO;
 }
 
 -(void)testDefaultHTTPMethod
