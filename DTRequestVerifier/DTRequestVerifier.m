@@ -159,6 +159,20 @@
     return serializedObject;
 }
 
+-(NSString *)stringFromJSON:(id)jsonObject
+{
+    if (!jsonObject)
+    {
+        return nil;
+    }
+    NSData * jsonData = [NSJSONSerialization dataWithJSONObject:jsonObject
+                                                        options:0
+                                                          error:nil];
+    NSString * string = [[NSString alloc] initWithData:jsonData
+                                              encoding:NSUTF8StringEncoding];
+    return string;
+}
+
 -(id)deserializeHTTPBody
 {
     switch (self.bodySerializationType) {
@@ -281,7 +295,9 @@
     
     if (!compareResult)
     {
-        [self handleFailureWithReason:@"Request body params do not match"];
+        NSString * expectedString = [self stringFromJSON:expectedParams];
+        NSString * receivedString = [self stringFromJSON:receivedParams];
+        [self handleFailureWithReason:[NSString stringWithFormat:@"Got request body params %@, expected %@",expectedString,receivedString]];
     }
     return compareResult;
 }
