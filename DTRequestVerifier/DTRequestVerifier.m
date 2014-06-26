@@ -297,7 +297,7 @@
     {
         NSString * expectedString = [self stringFromJSON:expectedParams];
         NSString * receivedString = [self stringFromJSON:receivedParams];
-        [self handleFailureWithReason:[NSString stringWithFormat:@"Got request body params %@, expected %@",expectedString,receivedString]];
+        [self handleFailureWithReason:[NSString stringWithFormat:@"Got request body params %@, expected %@",receivedString,expectedString]];
     }
     return compareResult;
 }
