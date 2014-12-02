@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9A4952B01A2DF74A002BD1E0 /* DTRequestVerifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 95219BF217F8BBB1005A5BBA /* DTRequestVerifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9A4952BB1A2DF76F002BD1E0 /* DTRequestVerifier_OSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A4952BA1A2DF76F002BD1E0 /* DTRequestVerifier_OSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A4952CF1A2DF775002BD1E0 /* DTRequestVerifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 95219BF217F8BBB1005A5BBA /* DTRequestVerifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A4952D31A2DFA47002BD1E0 /* DTRequestVerifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4952971A2DF738002BD1E0 /* DTRequestVerifier.framework */; };
 		9A4952D41A2DFA4C002BD1E0 /* DTRequestVerifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4952B61A2DF76F002BD1E0 /* DTRequestVerifier.framework */; };
@@ -251,7 +250,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A4952CF1A2DF775002BD1E0 /* DTRequestVerifier.h in Headers */,
-				9A4952BB1A2DF76F002BD1E0 /* DTRequestVerifier_OSX.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
