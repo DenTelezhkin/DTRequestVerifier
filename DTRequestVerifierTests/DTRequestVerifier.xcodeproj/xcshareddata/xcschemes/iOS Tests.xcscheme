@@ -17,7 +17,7 @@
                BlueprintIdentifier = "AA4E7EE01858AA900075C1D4"
                BuildableName = "iOS Tests.xctest"
                BlueprintName = "iOS Tests"
-               ReferencedContainer = "container:DTRequestVerifierTests.xcodeproj">
+               ReferencedContainer = "container:DTRequestVerifier.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "AA4E7EE01858AA900075C1D4"
                BuildableName = "iOS Tests.xctest"
                BlueprintName = "iOS Tests"
-               ReferencedContainer = "container:DTRequestVerifierTests.xcodeproj">
+               ReferencedContainer = "container:DTRequestVerifier.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

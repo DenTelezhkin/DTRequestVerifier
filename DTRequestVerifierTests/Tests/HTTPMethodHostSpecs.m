@@ -24,7 +24,7 @@
 
 -(void)testDefaultHTTPMethod
 {
-    XCTAssertEqual(self.verifier.HTTPMethod, @"GET");
+    XCTAssert([self.verifier.HTTPMethod isEqualToString:@"GET"]);
 }
 
 -(void)testHTTPMethodShouldFail

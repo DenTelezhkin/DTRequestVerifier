@@ -23,6 +23,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import <Foundation/Foundation.h>
+
 typedef NS_ENUM(NSInteger, DTBodySerializationType) {
     DTBodySerializationTypeRaw = 1,
     DTBodySerializationTypeJSON,

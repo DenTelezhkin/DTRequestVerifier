@@ -19,7 +19,7 @@
                BlueprintIdentifier = "AA4E7EC21858A6BD0075C1D4"
                BuildableName = "OS X Tests.xctest"
                BlueprintName = "OS X Tests"
-               ReferencedContainer = "container:DTRequestVerifierTests.xcodeproj">
+               ReferencedContainer = "container:DTRequestVerifier.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

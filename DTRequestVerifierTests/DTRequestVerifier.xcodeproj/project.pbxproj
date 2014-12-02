@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A4952B01A2DF74A002BD1E0 /* DTRequestVerifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 95219BF217F8BBB1005A5BBA /* DTRequestVerifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A4952BB1A2DF76F002BD1E0 /* DTRequestVerifier_OSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A4952BA1A2DF76F002BD1E0 /* DTRequestVerifier_OSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A4952CF1A2DF775002BD1E0 /* DTRequestVerifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 95219BF217F8BBB1005A5BBA /* DTRequestVerifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A4952D31A2DFA47002BD1E0 /* DTRequestVerifier_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4952971A2DF738002BD1E0 /* DTRequestVerifier_iOS.framework */; };
+		9A4952D41A2DFA4C002BD1E0 /* DTRequestVerifier_OSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4952B61A2DF76F002BD1E0 /* DTRequestVerifier_OSX.framework */; };
+		9A4952D51A2DFA77002BD1E0 /* DTRequestVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 95219BF317F8BBB1005A5BBA /* DTRequestVerifier.m */; };
+		9A4952D61A2DFA78002BD1E0 /* DTRequestVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 95219BF317F8BBB1005A5BBA /* DTRequestVerifier.m */; };
 		AA4E7ECF1858A6BD0075C1D4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA4E7ECD1858A6BD0075C1D4 /* InfoPlist.strings */; };
-		AA4E7EDC1858A7210075C1D4 /* DTRequestVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 95219BF317F8BBB1005A5BBA /* DTRequestVerifier.m */; };
 		AA4E7EEE1858AA900075C1D4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA4E7EEC1858AA900075C1D4 /* InfoPlist.strings */; };
-		AA4E7EFD1858AABE0075C1D4 /* DTRequestVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 95219BF317F8BBB1005A5BBA /* DTRequestVerifier.m */; };
 		AA4E7F071858ABE70075C1D4 /* BodyParamsSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4E7EFF1858ABE70075C1D4 /* BodyParamsSpecs.m */; };
 		AA4E7F081858ABE70075C1D4 /* BodyParamsSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4E7EFF1858ABE70075C1D4 /* BodyParamsSpecs.m */; };
 		AA4E7F091858ABE70075C1D4 /* HTTPHeadersSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4E7F001858ABE70075C1D4 /* HTTPHeadersSpecs.m */; };
@@ -30,6 +35,12 @@
 /* Begin PBXFileReference section */
 		95219BF217F8BBB1005A5BBA /* DTRequestVerifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTRequestVerifier.h; path = ../DTRequestVerifier/DTRequestVerifier.h; sourceTree = "<group>"; };
 		95219BF317F8BBB1005A5BBA /* DTRequestVerifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTRequestVerifier.m; path = ../DTRequestVerifier/DTRequestVerifier.m; sourceTree = "<group>"; };
+		9A4952971A2DF738002BD1E0 /* DTRequestVerifier_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DTRequestVerifier_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A49529A1A2DF738002BD1E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A49529B1A2DF738002BD1E0 /* DTRequestVerifier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTRequestVerifier.h; sourceTree = "<group>"; };
+		9A4952B61A2DF76F002BD1E0 /* DTRequestVerifier_OSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DTRequestVerifier_OSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A4952B91A2DF76F002BD1E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A4952BA1A2DF76F002BD1E0 /* DTRequestVerifier_OSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTRequestVerifier_OSX.h; sourceTree = "<group>"; };
 		AA4E7EC31858A6BD0075C1D4 /* OS X Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OS X Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA4E7ECC1858A6BD0075C1D4 /* OS X Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OS X Tests-Info.plist"; sourceTree = "<group>"; };
 		AA4E7ECE1858A6BD0075C1D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -49,10 +60,25 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9A4952931A2DF738002BD1E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A4952B21A2DF76F002BD1E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA4E7EC01858A6BD0075C1D4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A4952D41A2DFA4C002BD1E0 /* DTRequestVerifier_OSX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A4952D31A2DFA47002BD1E0 /* DTRequestVerifier_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,8 +98,8 @@
 			children = (
 				95219BF117F8BB99005A5BBA /* DTRequestVerifier */,
 				AA4E7EFE1858ABE70075C1D4 /* Tests */,
-				AA4E7ECA1858A6BD0075C1D4 /* OS X Tests */,
-				AA4E7EE91858AA900075C1D4 /* iOS Tests */,
+				9A4952D21A2DF842002BD1E0 /* Frameworks */,
+				9A4952D01A2DF823002BD1E0 /* Supporting files */,
 				95219BC017F8BAA4005A5BBA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,6 +109,8 @@
 			children = (
 				AA4E7EC31858A6BD0075C1D4 /* OS X Tests.xctest */,
 				AA4E7EE11858AA900075C1D4 /* iOS Tests.xctest */,
+				9A4952971A2DF738002BD1E0 /* DTRequestVerifier_iOS.framework */,
+				9A4952B61A2DF76F002BD1E0 /* DTRequestVerifier_OSX.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,6 +122,66 @@
 				95219BF317F8BBB1005A5BBA /* DTRequestVerifier.m */,
 			);
 			name = DTRequestVerifier;
+			sourceTree = "<group>";
+		};
+		9A4952981A2DF738002BD1E0 /* DTRequestVerifier */ = {
+			isa = PBXGroup;
+			children = (
+				9A49529B1A2DF738002BD1E0 /* DTRequestVerifier.h */,
+				9A4952991A2DF738002BD1E0 /* Supporting Files */,
+			);
+			path = DTRequestVerifier;
+			sourceTree = "<group>";
+		};
+		9A4952991A2DF738002BD1E0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9A49529A1A2DF738002BD1E0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9A4952B71A2DF76F002BD1E0 /* DTRequestVerifier_OSX */ = {
+			isa = PBXGroup;
+			children = (
+				9A4952BA1A2DF76F002BD1E0 /* DTRequestVerifier_OSX.h */,
+				9A4952B81A2DF76F002BD1E0 /* Supporting Files */,
+			);
+			path = DTRequestVerifier_OSX;
+			sourceTree = "<group>";
+		};
+		9A4952B81A2DF76F002BD1E0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9A4952B91A2DF76F002BD1E0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9A4952D01A2DF823002BD1E0 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				9A4952D11A2DF831002BD1E0 /* Targets */,
+			);
+			name = "Supporting files";
+			sourceTree = "<group>";
+		};
+		9A4952D11A2DF831002BD1E0 /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				AA4E7ECA1858A6BD0075C1D4 /* OS X Tests */,
+				AA4E7EE91858AA900075C1D4 /* iOS Tests */,
+			);
+			name = Targets;
+			sourceTree = "<group>";
+		};
+		9A4952D21A2DF842002BD1E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A4952981A2DF738002BD1E0 /* DTRequestVerifier */,
+				9A4952B71A2DF76F002BD1E0 /* DTRequestVerifier_OSX */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		AA4E7ECA1858A6BD0075C1D4 /* OS X Tests */ = {
@@ -148,7 +237,63 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		9A4952941A2DF738002BD1E0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A4952B01A2DF74A002BD1E0 /* DTRequestVerifier.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A4952B31A2DF76F002BD1E0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A4952CF1A2DF775002BD1E0 /* DTRequestVerifier.h in Headers */,
+				9A4952BB1A2DF76F002BD1E0 /* DTRequestVerifier_OSX.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		9A4952961A2DF738002BD1E0 /* DTRequestVerifier_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A4952AA1A2DF738002BD1E0 /* Build configuration list for PBXNativeTarget "DTRequestVerifier_iOS" */;
+			buildPhases = (
+				9A4952921A2DF738002BD1E0 /* Sources */,
+				9A4952931A2DF738002BD1E0 /* Frameworks */,
+				9A4952941A2DF738002BD1E0 /* Headers */,
+				9A4952951A2DF738002BD1E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DTRequestVerifier_iOS;
+			productName = DTRequestVerifier;
+			productReference = 9A4952971A2DF738002BD1E0 /* DTRequestVerifier_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9A4952B51A2DF76F002BD1E0 /* DTRequestVerifier_OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A4952C91A2DF770002BD1E0 /* Build configuration list for PBXNativeTarget "DTRequestVerifier_OSX" */;
+			buildPhases = (
+				9A4952B11A2DF76F002BD1E0 /* Sources */,
+				9A4952B21A2DF76F002BD1E0 /* Frameworks */,
+				9A4952B31A2DF76F002BD1E0 /* Headers */,
+				9A4952B41A2DF76F002BD1E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DTRequestVerifier_OSX;
+			productName = DTRequestVerifier_OSX;
+			productReference = 9A4952B61A2DF76F002BD1E0 /* DTRequestVerifier_OSX.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		AA4E7EC21858A6BD0075C1D4 /* OS X Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA4E7ED31858A6BD0075C1D4 /* Build configuration list for PBXNativeTarget "OS X Tests" */;
@@ -191,8 +336,16 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Denys Telezhkin";
+				TargetAttributes = {
+					9A4952961A2DF738002BD1E0 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					9A4952B51A2DF76F002BD1E0 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
 			};
-			buildConfigurationList = 95219BBA17F8BAA3005A5BBA /* Build configuration list for PBXProject "DTRequestVerifierTests" */;
+			buildConfigurationList = 95219BBA17F8BAA3005A5BBA /* Build configuration list for PBXProject "DTRequestVerifier" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -206,11 +359,27 @@
 			targets = (
 				AA4E7EC21858A6BD0075C1D4 /* OS X Tests */,
 				AA4E7EE01858AA900075C1D4 /* iOS Tests */,
+				9A4952961A2DF738002BD1E0 /* DTRequestVerifier_iOS */,
+				9A4952B51A2DF76F002BD1E0 /* DTRequestVerifier_OSX */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9A4952951A2DF738002BD1E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A4952B41A2DF76F002BD1E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA4E7EC11858A6BD0075C1D4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -230,6 +399,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9A4952921A2DF738002BD1E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A4952D51A2DFA77002BD1E0 /* DTRequestVerifier.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A4952B11A2DF76F002BD1E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A4952D61A2DFA78002BD1E0 /* DTRequestVerifier.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA4E7EBF1858A6BD0075C1D4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -241,7 +426,6 @@
 				AA4E7F0F1858ABE70075C1D4 /* QueryParamsSpecs.m in Sources */,
 				AA4E7F111858ABE70075C1D4 /* RequestVerifierTestCase.m in Sources */,
 				AA4E7F071858ABE70075C1D4 /* BodyParamsSpecs.m in Sources */,
-				AA4E7EDC1858A7210075C1D4 /* DTRequestVerifier.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +440,6 @@
 				AA4E7F101858ABE70075C1D4 /* QueryParamsSpecs.m in Sources */,
 				AA4E7F121858ABE70075C1D4 /* RequestVerifierTestCase.m in Sources */,
 				AA4E7F081858ABE70075C1D4 /* BodyParamsSpecs.m in Sources */,
-				AA4E7EFD1858AABE0075C1D4 /* DTRequestVerifier.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +535,115 @@
 			};
 			name = Release;
 		};
+		9A4952AB1A2DF738002BD1E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = DTRequestVerifier/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9A4952AC1A2DF738002BD1E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = DTRequestVerifier/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9A4952CA1A2DF770002BD1E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = DTRequestVerifier_OSX/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9A4952CB1A2DF770002BD1E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = DTRequestVerifier_OSX/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		AA4E7ED41858A6BD0075C1D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -399,7 +691,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "iOS Tests/iOS Tests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -416,7 +708,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOS Tests/iOS Tests-Prefix.pch";
 				INFOPLIST_FILE = "iOS Tests/iOS Tests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -425,7 +717,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		95219BBA17F8BAA3005A5BBA /* Build configuration list for PBXProject "DTRequestVerifierTests" */ = {
+		95219BBA17F8BAA3005A5BBA /* Build configuration list for PBXProject "DTRequestVerifier" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				95219BE917F8BAA4005A5BBA /* Debug */,
@@ -433,6 +725,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		9A4952AA1A2DF738002BD1E0 /* Build configuration list for PBXNativeTarget "DTRequestVerifier_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A4952AB1A2DF738002BD1E0 /* Debug */,
+				9A4952AC1A2DF738002BD1E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9A4952C91A2DF770002BD1E0 /* Build configuration list for PBXNativeTarget "DTRequestVerifier_OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A4952CA1A2DF770002BD1E0 /* Debug */,
+				9A4952CB1A2DF770002BD1E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		AA4E7ED31858A6BD0075C1D4 /* Build configuration list for PBXNativeTarget "OS X Tests" */ = {
 			isa = XCConfigurationList;
