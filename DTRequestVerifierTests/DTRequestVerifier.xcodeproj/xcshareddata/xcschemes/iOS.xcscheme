@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9A4952961A2DF738002BD1E0"
-               BuildableName = "DTRequestVerifier_iOS.framework"
-               BlueprintName = "DTRequestVerifier_iOS"
+               BuildableName = "DTRequestVerifier.framework"
+               BlueprintName = "iOS"
                ReferencedContainer = "container:DTRequestVerifier.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -43,8 +43,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9A4952961A2DF738002BD1E0"
-            BuildableName = "DTRequestVerifier_iOS.framework"
-            BlueprintName = "DTRequestVerifier_iOS"
+            BuildableName = "DTRequestVerifier.framework"
+            BlueprintName = "iOS"
             ReferencedContainer = "container:DTRequestVerifier.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -61,8 +61,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9A4952961A2DF738002BD1E0"
-            BuildableName = "DTRequestVerifier_iOS.framework"
-            BlueprintName = "DTRequestVerifier_iOS"
+            BuildableName = "DTRequestVerifier.framework"
+            BlueprintName = "iOS"
             ReferencedContainer = "container:DTRequestVerifier.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

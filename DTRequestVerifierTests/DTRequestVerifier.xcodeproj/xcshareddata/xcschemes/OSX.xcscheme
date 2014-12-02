@@ -15,22 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9A4952B51A2DF76F002BD1E0"
-               BuildableName = "DTRequestVerifier_OSX.framework"
-               BlueprintName = "DTRequestVerifier_OSX"
-               ReferencedContainer = "container:DTRequestVerifier.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9A4952BF1A2DF76F002BD1E0"
-               BuildableName = "DTRequestVerifier_OSXTests.xctest"
-               BlueprintName = "DTRequestVerifier_OSXTests"
+               BuildableName = "DTRequestVerifier.framework"
+               BlueprintName = "OSX"
                ReferencedContainer = "container:DTRequestVerifier.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,26 +28,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9A4952BF1A2DF76F002BD1E0"
-               BuildableName = "DTRequestVerifier_OSXTests.xctest"
-               BlueprintName = "DTRequestVerifier_OSXTests"
-               ReferencedContainer = "container:DTRequestVerifier.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9A4952B51A2DF76F002BD1E0"
-            BuildableName = "DTRequestVerifier_OSX.framework"
-            BlueprintName = "DTRequestVerifier_OSX"
-            ReferencedContainer = "container:DTRequestVerifier.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -76,8 +43,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9A4952B51A2DF76F002BD1E0"
-            BuildableName = "DTRequestVerifier_OSX.framework"
-            BlueprintName = "DTRequestVerifier_OSX"
+            BuildableName = "DTRequestVerifier.framework"
+            BlueprintName = "OSX"
             ReferencedContainer = "container:DTRequestVerifier.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -94,8 +61,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9A4952B51A2DF76F002BD1E0"
-            BuildableName = "DTRequestVerifier_OSX.framework"
-            BlueprintName = "DTRequestVerifier_OSX"
+            BuildableName = "DTRequestVerifier.framework"
+            BlueprintName = "OSX"
             ReferencedContainer = "container:DTRequestVerifier.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
