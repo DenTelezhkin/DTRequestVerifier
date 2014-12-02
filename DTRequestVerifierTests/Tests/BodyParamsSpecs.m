@@ -80,9 +80,11 @@
 -(void)testPlistXMLBodyMustBeValidated
 {
     NSDictionary * params = @{@"query":@"bar",@"koo":@[@"foo"],@"count":@{@"boo":@"boo2"}, @"test":@5};
-    NSString * error = nil;
-    NSData * data =[NSPropertyListSerialization dataFromPropertyList:params
-                                                              format:NSPropertyListXMLFormat_v1_0 errorDescription:&error];
+    NSError * error = nil;
+    NSData * data = [NSPropertyListSerialization dataWithPropertyList:params
+                                                               format:NSPropertyListXMLFormat_v1_0
+                                                              options:0
+                                                                error:&error];
     [self.request setHTTPBody:data];
     
     self.verifier.bodyParams = params;
@@ -94,9 +96,11 @@
 -(void)testPlistBunaryFormatMustBeValidated
 {
     NSDictionary * params = @{@"query":@"bar",@"koo":@[@"foo"],@"count":@{@"boo":@"boo2"}, @"test":@5};
-    NSString * error = nil;
-    NSData * data =[NSPropertyListSerialization dataFromPropertyList:params
-                                                              format:NSPropertyListBinaryFormat_v1_0 errorDescription:&error];
+    NSError * error = nil;
+    NSData * data = [NSPropertyListSerialization dataWithPropertyList:params
+                                                               format:NSPropertyListXMLFormat_v1_0
+                                                              options:0
+                                                                error:&error];
     [self.request setHTTPBody:data];
     
     self.verifier.bodyParams = params;
@@ -109,8 +113,10 @@
 {
     NSDictionary * params = @{@"query":@"bar",@"count":@5};
     
-    [self.request setHTTPBody:[NSPropertyListSerialization dataFromPropertyList:params
-                                                                         format:NSPropertyListXMLFormat_v1_0 errorDescription:nil]];
+    [self.request setHTTPBody:[NSPropertyListSerialization dataWithPropertyList:params
+                                                                         format:NSPropertyListXMLFormat_v1_0
+                                                                        options:0
+                                                                          error:nil]];
     self.verifier.bodySerializationType = DTBodySerializationTypePlist;
     
     XCTAssertFalse([self.verifier verifyRequest:self.request]);
@@ -120,9 +126,10 @@
 {
     NSDictionary * params =@{@"query":@"bar",@"count":@5};
     
-    [self.request setHTTPBody:[NSPropertyListSerialization dataFromPropertyList:params
-                                                                         format:NSPropertyListXMLFormat_v1_0 errorDescription:nil]];
-    
+    [self.request setHTTPBody:[NSPropertyListSerialization dataWithPropertyList:params
+                                                                         format:NSPropertyListXMLFormat_v1_0
+                                                                        options:0
+                                                                          error:nil]];
     self.verifier.bodyParams = @{@"query":@"bar"};
     self.verifier.bodySerializationType = DTBodySerializationTypePlist;
     
